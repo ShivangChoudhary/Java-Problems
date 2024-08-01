@@ -24,6 +24,8 @@ class GFG {
 // } Driver Code Ends
 
 
+
+
 // User function Template for Java
 class Solution {
 
@@ -35,12 +37,12 @@ class Solution {
         int arr1[]= new int[n];
         for(int i=0;i<n;i++){
             arr1[i]=i+1;
-
         }
         for(int i=0;i<n-1;i++){
             if(arr[i]!=arr1[i]){
                 return arr1[i];
             }
+            
         }
         return n;
     }
