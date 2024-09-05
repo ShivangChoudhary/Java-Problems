@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.*;
 
 class GFG {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -24,26 +25,18 @@ class GFG {
 // } Driver Code Ends
 
 
-
-
 // User function Template for Java
 class Solution {
 
     // Note that the size of the array is n-1
     int missingNumber(int n, int arr[]) {
-            Arrays.sort(arr);
 
         // Your Code Here
-        int arr1[]= new int[n];
-        for(int i=0;i<n;i++){
-            arr1[i]=i+1;
+        int sum = (n*(n+1))/2;
+        for(int i=0;i<arr.length;i++){
+            sum = sum -arr[i];
         }
-        for(int i=0;i<n-1;i++){
-            if(arr[i]!=arr1[i]){
-                return arr1[i];
-            }
-            
-        }
-        return n;
+        return sum;
     }
+   
 }
